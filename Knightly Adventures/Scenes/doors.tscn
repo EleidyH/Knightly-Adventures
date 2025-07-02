@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlftp16vdhjee"]
+
+[ext_resource type="Texture2D" uid="uid://b5j7hjdyfovr2" path="res://assets/sprites/castledoors.png" id="1_3oa17"]
+[ext_resource type="Texture2D" uid="uid://c6hl213qo2e8a" path="res://assets/sprites/animatedcastledoors.png" id="2_bd7c1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4a4d"]
+atlas = ExtResource("1_3oa17")
+region = Rect2(0, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j1im"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(0, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brwkg"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(64, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g086a"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(128, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ivxn"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(192, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj0i5"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(256, 0, 64, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3n6q"]
+atlas = ExtResource("2_bd7c1")
+region = Rect2(320, 0, 64, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h616r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4a4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j1im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brwkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g086a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ivxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj0i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3n6q")
+}],
+"loop": false,
+"name": &"door 2?",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4a4d")
+}],
+"loop": false,
+"name": &"doors",
+"speed": 5.0
+}]
+
+[node name="Doors" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_h616r")
+animation = &"door 2?"
